@@ -1,10 +1,18 @@
+package com.company;
+
 public abstract class Unit {
 
     private int hp;
+
+    public Unit(int hp, int damage, String name, int defense, int stepForMap) {
+        this.hp = hp;
+        this.damage = damage;
+        this.name = name;
+        this.defense = defense;
+        this.stepForMap = stepForMap;
+    }
+
     private int damage;
-    private String name;
-    private int defense;
-    private int stepForMap;
 
     public int getHp() {
         return hp;
@@ -38,19 +46,19 @@ public abstract class Unit {
         this.defense = defense;
     }
 
-    public int getStopForMap() {
+    public int getStepForMap() {
         return stepForMap;
     }
 
-    public void setStopForMap(int stepForMap) {
+    public void setStepForMap(int stepForMap) {
         this.stepForMap = stepForMap;
     }
 
-    public Unit(int hp, int damage, String name, int defense, int stepForMap) {
-        this.hp = hp;
-        this.damage = damage;
-        this.name = name;
-        this.defense = defense;
-        this.stepForMap = stepForMap;
-    }
+    private String name;
+    private int defense;
+    private int stepForMap;
+
+    public abstract boolean Attack(Unit unit);
+
+    public abstract String getAsString();
 }

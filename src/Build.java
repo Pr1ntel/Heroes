@@ -51,13 +51,34 @@ public class Build {
         return output;
     }
 
-    public static int randNum() {
+    public static int randNumPlayerStr() {
         Random random = new Random();
-        int min = 1;
-        int max = 2;
+        int min = 0;
+        int max = 1;
+        int randNumber = random.nextInt((max - min) + 1) + min;
+        return randNumber;
+    }
+    public static int randNumPlayerHeight() {
+        Random random = new Random();
+        int min = 0;
+        int max = 9;
         int randNumber = random.nextInt((max - min) + 1) + min;
         return randNumber;
     }
 
+    public static int randNumBotStr() {
+        Random random = new Random();
+        int min = 5;
+        int max = 6;
+        int randNumber = random.nextInt((max - min) + 1) + min;
+        return randNumber;
+    }
+    public static int randNumBotHeight() {
+        Random random = new Random();
+        int min = 0;
+        int max = 9;
+        int randNumber = random.nextInt((max - min) + 1) + min;
+        return randNumber;
+    }
 
 }
